@@ -65,7 +65,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ROOM_SEGUE"]){
         RoomListViewController *roomVC = (RoomListViewController *)segue.destinationViewController;
-        NSIndexPath *indexPath = self.tableView.indexPathsForSelectedRows.firstObject;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
         roomVC.selectedHotel = self.hotels[indexPath.row];
         
     }
