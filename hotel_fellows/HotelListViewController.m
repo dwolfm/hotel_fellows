@@ -10,27 +10,33 @@
 #import "AppDelegate.h"
 #import "Hotel.h"
 #import "RoomListViewController.h"
+#import "CoreDataStack.h"
+#import "HotelService.h"
 
 
 @interface HotelListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *hotels;
+//@property (strong, nonatomic) CoreDataStack *cdStack;
 @end
 
 @implementation HotelListViewController
 
 - (void)viewDidLoad {
     
+    
+    
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = appDelegate.managedObjectContext;
+//    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+//    NSManagedObjectContext *context = appDelegate.managedObjectContext;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Hotel"];
     NSError *fetchError;
     
-    NSArray *results = [context executeFetchRequest:fetchRequest error: &fetchError];
+    
+    NSArray *results = [[[HotelService sharedService] coreDataStack].managedObjectContext executeFetchRequest:fetchRequest error:&fetchError];
     
     if (!fetchError){
         self.hotels = results;

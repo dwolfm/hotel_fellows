@@ -33,6 +33,24 @@
                                             <segue destination="7gh-EG-HDO" kind="show" id="UXF-gg-7hi"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="F7E-K6-EDw" style="IBUITableViewCellStyleDefault" id="dsN-mw-SyS">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dsN-mw-SyS" id="SIr-0O-nGD">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Check avalible" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F7E-K6-EDw">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="NMg-z7-PEU" kind="show" id="EUL-mf-e7c"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -92,6 +110,63 @@
             </objects>
             <point key="canvasLocation" x="1819" y="673"/>
         </scene>
+        <!--Check Available View Controller-->
+        <scene sceneID="hHZ-We-Th8">
+            <objects>
+                <viewController id="NMg-z7-PEU" customClass="CheckAvailableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a9S-FO-jph"/>
+                        <viewControllerLayoutGuide type="bottom" id="ekH-wT-yO2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G2c-oP-mlr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="20U-tm-X0F">
+                                <rect key="frame" x="140" y="120" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="445400040.4777">
+                                    <!--2015-02-12 02:14:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ltT-XL-Ytn">
+                                <rect key="frame" x="140" y="316" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="445400043.54954898">
+                                    <!--2015-02-12 02:14:03 +0000-->
+                                </date>
+                            </datePicker>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U4C-FW-t3W">
+                                <rect key="frame" x="105" y="84" width="391" height="29"/>
+                                <segments>
+                                    <segment title="register"/>
+                                    <segment title="solid stay"/>
+                                    <segment title="remote"/>
+                                    <segment title="weekend web"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ltT-XL-Ytn" firstAttribute="top" secondItem="20U-tm-X0F" secondAttribute="bottom" constant="34" id="4oU-W8-HHq"/>
+                            <constraint firstItem="ltT-XL-Ytn" firstAttribute="top" secondItem="20U-tm-X0F" secondAttribute="bottom" constant="34" id="HNU-LJ-7wV"/>
+                            <constraint firstAttribute="centerX" secondItem="ltT-XL-Ytn" secondAttribute="centerX" id="Wc2-Ld-Sxm"/>
+                            <constraint firstAttribute="centerX" secondItem="20U-tm-X0F" secondAttribute="centerX" id="e6r-xj-zUH"/>
+                            <constraint firstItem="ltT-XL-Ytn" firstAttribute="top" secondItem="20U-tm-X0F" secondAttribute="bottom" constant="34" id="hhc-os-hQf"/>
+                            <constraint firstItem="20U-tm-X0F" firstAttribute="top" secondItem="a9S-FO-jph" secondAttribute="bottom" constant="56" id="lDZ-dE-DEr"/>
+                            <constraint firstAttribute="centerX" secondItem="ltT-XL-Ytn" secondAttribute="centerX" id="lWc-e8-t1w"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4oU-W8-HHq"/>
+                                <exclude reference="hhc-os-hQf"/>
+                                <exclude reference="lWc-e8-t1w"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7h-by-w7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162" y="1375"/>
+        </scene>
         <!--Room List View Controller-->
         <scene sceneID="cZp-DX-k3Z">
             <objects>
@@ -114,6 +189,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tmP-Bi-SZg" id="LPk-lM-nU2">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Wzx-kM-1A4" kind="show" id="z3I-Yc-Pb1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -132,7 +210,105 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHR-oi-tRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="1411"/>
+            <point key="canvasLocation" x="1819" y="1415"/>
+        </scene>
+        <!--Reservation List View Controller-->
+        <scene sceneID="qmu-aT-4zb">
+            <objects>
+                <viewController id="Wzx-kM-1A4" customClass="ReservationListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cqp-Vn-lDg"/>
+                        <viewControllerLayoutGuide type="bottom" id="nKf-na-IaO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VDd-d8-jyj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xMm-F1-lG9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="q6l-ho-WGG">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q6l-ho-WGG" id="AG0-5l-aXX">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ui4-p9-AXN" kind="show" identifier="MAKE_RESERVATION_SEGUE" id="qt7-p9-3az"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xMm-F1-lG9" secondAttribute="trailing" constant="-16" id="3DT-j3-FT0"/>
+                            <constraint firstItem="xMm-F1-lG9" firstAttribute="leading" secondItem="VDd-d8-jyj" secondAttribute="leadingMargin" constant="-16" id="66c-RV-9Ax"/>
+                            <constraint firstItem="xMm-F1-lG9" firstAttribute="top" secondItem="VDd-d8-jyj" secondAttribute="topMargin" id="85a-LJ-BOK"/>
+                            <constraint firstItem="nKf-na-IaO" firstAttribute="top" secondItem="xMm-F1-lG9" secondAttribute="bottom" id="8TM-Oz-JB8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="xMm-F1-lG9" id="ULe-0Z-I9f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="trd-6E-U7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1819" y="2116"/>
+        </scene>
+        <!--Make Reservation View Controller-->
+        <scene sceneID="yw6-nu-VXp">
+            <objects>
+                <viewController id="ui4-p9-AXN" customClass="MakeReservationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OvM-Eg-qO3"/>
+                        <viewControllerLayoutGuide type="bottom" id="lgL-vq-RL9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SWl-dL-jfh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4qZ-7r-35D">
+                                <rect key="frame" x="140" y="128" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="445399499.81298202">
+                                    <!--2015-02-12 02:04:59 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ti4-Qg-KxV">
+                                <rect key="frame" x="140" y="316" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="445399506.68222803">
+                                    <!--2015-02-12 02:05:06 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRF-qL-PLa">
+                                <rect key="frame" x="277" y="486" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bookPressed:" destination="ui4-p9-AXN" eventType="touchUpInside" id="OEB-my-btZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bRF-qL-PLa" firstAttribute="top" secondItem="ti4-Qg-KxV" secondAttribute="bottom" constant="8" id="7O5-mw-ZlD"/>
+                            <constraint firstItem="4qZ-7r-35D" firstAttribute="top" secondItem="OvM-Eg-qO3" secondAttribute="bottom" constant="64" id="8q3-PQ-pWO"/>
+                            <constraint firstAttribute="centerX" secondItem="ti4-Qg-KxV" secondAttribute="centerX" id="Nau-fz-ydF"/>
+                            <constraint firstAttribute="centerX" secondItem="bRF-qL-PLa" secondAttribute="centerX" id="Tzb-3e-1h6"/>
+                            <constraint firstItem="ti4-Qg-KxV" firstAttribute="top" secondItem="4qZ-7r-35D" secondAttribute="bottom" constant="26" id="ldj-VO-sBO"/>
+                            <constraint firstAttribute="centerX" secondItem="4qZ-7r-35D" secondAttribute="centerX" id="yp6-Vp-BeA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="endDatePicker" destination="ti4-Qg-KxV" id="OK7-2A-2QB"/>
+                        <outlet property="startDatePicker" destination="4qZ-7r-35D" id="eZh-LH-Cpt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMe-Qw-zn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813" y="2855"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q37-ma-pio">
