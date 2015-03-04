@@ -22,6 +22,7 @@
 		554877B31A896BC0005DE731 /* seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 554877B21A896BC0005DE731 /* seed.json */; };
 		554877B61A896C63005DE731 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554877B51A896C63005DE731 /* MenuTableViewController.m */; };
 		554877BC1A897D9F005DE731 /* RoomListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554877BB1A897D9F005DE731 /* RoomListViewController.m */; };
+		559198051A917F74007F463A /* CoreDataStack in Resources */ = {isa = PBXBuildFile; fileRef = 559198041A917F74007F463A /* CoreDataStack */; };
 		55D19DCC1A8C42DB00FCE30A /* ReservationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D19DCB1A8C42DB00FCE30A /* ReservationListViewController.m */; };
 		55D19DCF1A8C42EB00FCE30A /* MakeReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D19DCE1A8C42EB00FCE30A /* MakeReservationViewController.m */; };
 		55D19DD21A8C42F800FCE30A /* CheckAvailableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D19DD11A8C42F800FCE30A /* CheckAvailableViewController.m */; };
@@ -67,6 +68,7 @@
 		554877B51A896C63005DE731 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		554877BA1A897D9F005DE731 /* RoomListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomListViewController.h; sourceTree = "<group>"; };
 		554877BB1A897D9F005DE731 /* RoomListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomListViewController.m; sourceTree = "<group>"; };
+		559198041A917F74007F463A /* CoreDataStack */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CoreDataStack; path = ../../../../../../../Desktop/CoreDataStack; sourceTree = "<group>"; };
 		55D19DCA1A8C42DB00FCE30A /* ReservationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservationListViewController.h; sourceTree = "<group>"; };
 		55D19DCB1A8C42DB00FCE30A /* ReservationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservationListViewController.m; sourceTree = "<group>"; };
 		55D19DCD1A8C42EB00FCE30A /* MakeReservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeReservationViewController.h; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				554877B51A896C63005DE731 /* MenuTableViewController.m */,
 				55D19DD31A8C5ED600FCE30A /* CoreDataStack.h */,
 				55D19DD41A8C5ED600FCE30A /* CoreDataStack.m */,
+				559198041A917F74007F463A /* CoreDataStack */,
 				554877AF1A896B00005DE731 /* HotelListViewController.h */,
 				554877B01A896B00005DE731 /* HotelListViewController.m */,
 				554877BA1A897D9F005DE731 /* RoomListViewController.h */,
@@ -284,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559198051A917F74007F463A /* CoreDataStack in Resources */,
 				554877891A895F32005DE731 /* Main.storyboard in Resources */,
 				5548778E1A895F32005DE731 /* LaunchScreen.xib in Resources */,
 				554877B31A896BC0005DE731 /* seed.json in Resources */,

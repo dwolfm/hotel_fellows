@@ -34,7 +34,12 @@
     guest.firstName = @"dunk";
     guest.lastName = @"slug";
     
-    [[HotelService sharedService] bookReservationForGuest:guest forRoom:self.selectedRoom startDate:self.startDatePicker.date endDate:self.endDatePicker.date];
+    NSLog(@"made reservation for adate %@", self.startDatePicker.date);
+    [[HotelService sharedService]bookReservationForGuest:guest forRoom:self.selectedRoom startDate:self.startDatePicker.date endDate:self.endDatePicker.date];
+
+    
+    [[self navigationController] popViewControllerAnimated:true];
+
 }
 /*
 #pragma mark - Navigation

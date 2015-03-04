@@ -9,6 +9,7 @@
 #import "RoomListViewController.h"
 #import "AppDelegate.h"
 #import "Room.h"
+#import "ReservationListViewController.h"
 
 @interface RoomListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -39,6 +40,15 @@
     Room *room = self.roomsArray[indexPath.row];
     cell.textLabel.text =  [NSString stringWithFormat:@"%@", room.number];
     return cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"RESERVAION_LIST"]) {
+        ReservationListViewController *destinationVC = segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        Room *room = self.roomsArray[indexPath.row];
+        destinationVC.selectedRoom = room;
+    }
 }
 
 

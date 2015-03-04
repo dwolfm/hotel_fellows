@@ -190,7 +190,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Wzx-kM-1A4" kind="show" id="z3I-Yc-Pb1"/>
+                                            <segue destination="Wzx-kM-1A4" kind="show" identifier="RESERVAION_LIST" id="z3I-Yc-Pb1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
